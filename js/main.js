@@ -23,6 +23,8 @@ form.addEventListener("submit", (e) => {
 		itemAtual.id = existe.id
 
 		atualizaElemento(itemAtual)
+
+		itens[existe.id] = itemAtual
 	} else {
 		itemAtual.id = itens.length
 
