@@ -50,9 +50,27 @@ function criaElemento(item){
  	novoItem.appendChild(numeroItem)
  	novoItem.innerHTML += item.nome
 
+ 	novoItem.appendChild(botaoDelete())
+
  	lista.appendChild(novoItem)
 }
 
 function atualizaElemento(item){
 	document.querySelector("[data-id='"+item.id+"']").innerHTML = item.quantidade
+}
+
+function botaoDelete(){
+	const elementoBotao = document.createElement('button')
+	elementoBotao.innerText = "X"
+	elementoBotao.classList.add('buttonDelete')
+
+	elementoBotao.addEventListener('click', function (){
+		deleteElemento(this.parentNode)
+	})
+
+	return elementoBotao
+}
+
+function deleteElemento(tag){
+	tag.remove()
 }

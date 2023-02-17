@@ -130,3 +130,8 @@ html {
     font-weight: 400;
 }
 
+.buttonDelete{
+    border: none;
+    background-color: transparent;
+    font-size: 1em;
+}
